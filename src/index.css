@@ -22,6 +22,49 @@ img {
   margin: 10px 0 20px;
 }
 
+/* ANIMATION QUOTE */
+.quote-container {
+  position: relative;
+  width: 100%;
+  height: 4em;
+  margin: 0.5em auto 2em;
+  overflow: hidden;
+}
+
+.quote-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.quote-text p {
+  color: #333;
+}
+
+.quote-container {
+  position: relative;
+}
+
+.quote-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  width: 100%;
+  text-align: center;
+}
+
+.quote-text.opacity-100 {
+  opacity: 1;
+}
+
+
+
 @media (min-width: 768px) {
   img.blog__image {
     height: 600px;
