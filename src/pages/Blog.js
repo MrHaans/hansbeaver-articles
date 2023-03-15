@@ -46,12 +46,10 @@ export default function Blog() {
                 src={post.mainImage.asset.url}
                 alt={post.title}
               />
-              {/* Tanggal Update diletakkan disini */}
               <p className="text-xs text-gray-500 mb-1 mt-1 ml-1">
                 Published on{" "}
                 {format(new Date(post.publishedAt), "dd MMMM yyyy")}
               </p>
-              {/* Kategori Ditambah Disini  */}
               <h4 className="text-xl mt-2 font-bold">{post.title}</h4>
               <div className="my-4">
                 <BlockContent

@@ -24,7 +24,7 @@ export default function Homepage() {
         </button>
         <button className="items-center justify-center">
           <a
-            href="https://hansbeaver-website.vercel.app/"
+            href="https://hansbeaver.tech/"
             target="_blank"
             rel="noopener noreferrer"
             className="py-3 px-9 rounded shadow text-white bg-black hover:bg-transparent border-2 border-black

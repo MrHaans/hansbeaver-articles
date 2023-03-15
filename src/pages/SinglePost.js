@@ -65,7 +65,6 @@ export default function SinglePost() {
                 </span>
               )}
             </p>
-            // Tambah Kategori Yang Di Fetching Dari Sanity Disini
           )}
           {singlePost.mainImage && singlePost.mainImage.asset && (
             <img
@@ -87,7 +86,7 @@ export default function SinglePost() {
                 Author: Hans Beaver
               </p>
               <a
-                href="https://hansbeaver-website.vercel.app/"
+                href="https://hansbeaver.tech/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-green-400 text-xs md:text-sm lg:text-sm underline"
