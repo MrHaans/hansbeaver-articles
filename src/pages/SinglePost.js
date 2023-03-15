@@ -23,7 +23,8 @@ export default function SinglePost() {
                 },
                 alt
             },
-            publishedAt
+            publishedAt,
+            categories[]->{title}
         }`
       )
       .then((data) => setSinglePost(data[0]));
@@ -51,7 +52,20 @@ export default function SinglePost() {
             <p className="text-gray-500 mb-10 text-xs md:text-base lg:text-base text-center">
               Published on{" "}
               {format(new Date(singlePost.publishedAt), "dd MMMM yyyy")}
+              {singlePost.categories && (
+                <span>
+                  {" "}
+                  <strong className="text-black">in{" "}</strong>
+                  {singlePost.categories.map((category, index) => (
+                    <span key={category._id}>
+                      {index > 0 && ", "}
+                      <strong className="text-black">{category.title}</strong>
+                    </span>
+                  ))}
+                </span>
+              )}
             </p>
+            // Tambah Kategori Yang Di Fetching Dari Sanity Disini
           )}
           {singlePost.mainImage && singlePost.mainImage.asset && (
             <img
@@ -94,7 +108,7 @@ export default function SinglePost() {
           <button>
             <Link
               to="/blog"
-              className="py-2 px-6 rounded shadow text-white bg-green-400 hover:bg-transparent border-2 
+              className="py-3 px-8 rounded shadow text-white bg-green-400 hover:bg-transparent border-2 
               border-green-400 transition-all duration-500 hover:text-black font-bold"
             >
               Read more articles

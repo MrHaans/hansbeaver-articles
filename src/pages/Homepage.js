@@ -10,13 +10,13 @@ export default function Homepage() {
           src={icon}
           alt="Icon"
         />
-        <h1 className="uppercase font-bold text-4xl tracking-wide mb-7 md:text-6xl lg:text-7xl items-center justify-center">
+        <h1 className="uppercase font-bold text-4xl tracking-wide mb-10 md:text-6xl lg:text-7xl items-center justify-center">
           Hans Beaver's Article
         </h1>
-        <button className="items-center justify-center mb-8">
+        <button className="items-center justify-center mb-10">
           <Link
             to="/blog"
-            className="py-2 px-6 rounded shadow text-white bg-green-400 hover:bg-transparent border-2 border-green-400
+            className="py-3 px-8 rounded shadow text-white bg-green-400 hover:bg-transparent border-2 border-green-400
             transition-all duration-500 hover:text-black font-bold"
           >
             Read my article post
@@ -27,7 +27,7 @@ export default function Homepage() {
             href="https://hansbeaver-website.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="py-2 px-6 rounded shadow text-white bg-black hover:bg-transparent border-2 border-black
+            className="py-3 px-9 rounded shadow text-white bg-black hover:bg-transparent border-2 border-black
             transition-all duration-500 hover:text-black font-bold"
           >
             Back to my website 
