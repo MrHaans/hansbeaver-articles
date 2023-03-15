@@ -7,7 +7,7 @@ export default function Header() {
       <header className="flex item-center justify-between bg-black text-white px-6 py-3 h-full">
         <div className="logo">
           <Link to="/">
-            <img className="w-48 md:w-56 lg:w-64" src={logo} alt="Logo" />
+            <img className="w-40 md:w-56 lg:w-64" src={logo} alt="Logo" />
           </Link>
         </div>
 

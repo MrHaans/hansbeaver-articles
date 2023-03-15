@@ -29,7 +29,7 @@ export default function Homepage() {
     <div>
       <section className="flex flex-col items-center justify-start text-center h-screen">
         <img
-          className="w-32 md:w-44 lg:w-52 mt-14 mb-8 items-center justify-center"
+          className="w-32 md:w-44 lg:w-52 mt-16 mb-8 items-center justify-center"
           src={icon}
           alt="Icon"
         />

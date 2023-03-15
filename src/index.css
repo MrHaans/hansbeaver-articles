@@ -25,9 +25,9 @@ img {
 /* ANIMATION QUOTE */
 .quote-container {
   position: relative;
-  width: 100%;
-  height: 4em;
-  margin: 0.5em auto 2em;
+  width: 95%;
+  height: 4.5em;
+  margin: 0.5em auto 2.4em;
   overflow: hidden;
 }
 
@@ -63,7 +63,42 @@ img {
   opacity: 1;
 }
 
+/* ANIMATION CATEGORY  */
+.category-container {
+  position: relative;
+  width: 95%;
+  height: 1.6em;
+  margin: 0.2em auto 1.5em;
+  overflow: hidden;
+}
 
+.category-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.category-container {
+  position: relative;
+}
+
+.category-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  width: 100%;
+  text-align: center;
+}
+
+.category-text.opacity-100 {
+  opacity: 1;
+}
 
 @media (min-width: 768px) {
   img.blog__image {

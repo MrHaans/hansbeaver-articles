@@ -6,6 +6,43 @@ import { format } from "date-fns";
 
 export default function Blog() {
   const [posts, setPosts] = useState([]);
+  // NEW CODE FOR ANIMATION
+  const categories = [
+    "Computer Science",
+    "Algorithm",
+    "Technology",
+    "Blockchain",
+    "Cryptocurrency",
+    "Philosophy",
+    "Conspiracy",
+    "Innovation",
+    "Investment",
+    "Ideas",
+    "Self Help",
+    "Biography",
+    "Education",
+    "Business",
+    "Fiction",
+    "Arts",
+    "History",
+    "Languages",
+    "Mathematics",
+    "Religion",
+    "Psychology",
+  ];
+
+  const [categoryIndex, setCategoryIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCategoryIndex((categoryIndex) =>
+        categoryIndex === categories.length - 1 ? 0 : categoryIndex + 1
+      );
+    }, 1800);
+
+    return () => clearInterval(interval);
+  }, [categories.length]);
+  // ANIMATION END
 
   useEffect(() => {
     client
@@ -31,12 +68,31 @@ export default function Blog() {
   return (
     <>
       <section className="px-5 2xl:max-w-7xl 2xl:mx-auto">
-        <h1 className="font-bold text-4xl mt-14 mb-2 tracking-widest text-center md:text-6xl lg:text-7xl">
+        <h1 className="font-bold text-4xl mt-6 mb-4 tracking-widest text-center md:text-6xl lg:text-7xl">
           Article Page
         </h1>
-        <h2 className="text-xs text-center mb-14 md:text-sm lg:text-base text-gray-500">
-          Currently there are only ({posts.length}) article posts available.
+        <h2 className="text-xs text-center mb-0 md:text-sm lg:text-base text-gray-500">
+          Currently there are only (
+          <strong className="text-blue-600">{posts.length}</strong>) article
+          posts available.
         </h2>
+
+        {/* CATEGORY ANIMATION CHANGE CODE */}
+        <div className="category-container">
+          {categories.map((category, index) => (
+            <div
+              key={index}
+              className={`category-text ${
+                index === categoryIndex ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <p className="font-bold text-sm md:text-base lg:text-lg text-blue-600">
+                {category}
+              </p>
+            </div>
+          ))}
+        </div>
+        {/* ANIMATION END  */}
 
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
