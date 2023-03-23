@@ -10,6 +10,7 @@ export default function Homepage() {
     "I read to live, I write to share their life. - JESSIE WINTERSPRING",
     "The more I learn, the more I realize how much I don’t know. - ALBERT EINSTEIN",
     "Everyone who's born has a mysterious life path to follow. We must live to find that one reason to live. - SUCHET CHATURVEDI",
+    "If you cant hold, you wont be rich. - CZ BINANCE",
   ];
 
   const [quoteIndex, setQuoteIndex] = useState(0);

@@ -29,6 +29,7 @@ export default function Blog() {
     "Mathematics",
     "Religion",
     "Psychology",
+    "Tutorial",
   ];
 
   const [categoryIndex, setCategoryIndex] = useState(0);
